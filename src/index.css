@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @utility container {
     margin: auto;
@@ -7,4 +8,11 @@
 
 @theme{
     --color-primary: #00d001;
+    --color-dark: #171923;
+    --color-light: #fff;
+    --color-body: #1d1e28;
+}
+
+.dark{
+    @apply bg-[#171923] text-[#fff];
 }
