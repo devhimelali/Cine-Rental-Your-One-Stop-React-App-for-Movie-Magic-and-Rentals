@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { MovieContext } from "../../contexts/index.js";
 import CartItem from "./CartItem.jsx";
 import CheckoutIcon from "../../assets/images/icons/checkout.svg"
+import { toast } from "react-toastify";
 
 export default function CartDetails({ onClose }) {
     const { state, dispatch } = useContext(MovieContext);
@@ -10,6 +11,9 @@ export default function CartDetails({ onClose }) {
         dispatch({
             type: "REMOVE_FROM_CART",
             payload: item,
+        });
+        toast.success(`The movie ${item.title} has been removed from the cart`,{
+            position: 'bottom-right',
         });
     };
     return (

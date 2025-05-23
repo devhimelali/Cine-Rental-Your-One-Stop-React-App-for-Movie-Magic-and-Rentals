@@ -5,6 +5,7 @@ import Footer from "./components/Footer.jsx";
 import { MovieContext, ThemeContext } from "./contexts/index.js";
 import { useState, useReducer } from "react";
 import { cartReducer, initialState } from "./reducers/CartReducer.js";
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                         </main>
                         <Footer/>
                     </div>
+                    <ToastContainer/>
                 </MovieContext.Provider>
             </ThemeContext.Provider>
         </>
