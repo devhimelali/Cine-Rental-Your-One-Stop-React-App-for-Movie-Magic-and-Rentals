@@ -1,6 +1,7 @@
 import Header from "./components/Header.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import MovieList from "./components/cine/MovieList.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                     <MovieList/>
                 </div>
             </main>
+            <Footer/>
         </>
     )
 }
