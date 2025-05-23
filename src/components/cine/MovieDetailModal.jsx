@@ -1,7 +1,7 @@
 import { getImageUrl } from "../../utils/cine-utility.js";
 import Tag from "../../assets/images/tag.svg"
 
-export default function MovieDetailModal({ movie, onClose }) {
+export default function MovieDetailModal({ movie,onAddToCart ,onClose }) {
     return (
         <div
             className="fixed top-0 left-0 w-screen h-screen z-50 bg-black/60 backdrop-blur-sm"
@@ -32,13 +32,13 @@ export default function MovieDetailModal({ movie, onClose }) {
                             {movie.description}
                         </p>
                         <div className="grid lg:grid-cols-2 gap-2">
-                            <a
-                                className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
-                                href="#"
+                            <button
+                                className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm cursor-pointer"
+                                onClick={onAddToCart}
                             >
                                 <img src={Tag} alt="tag"/>
                                 <span>$100 | Add to Cart</span>
-                            </a>
+                            </button>
                             <a
                                 className="border border-[#74766F] rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#6F6F6F] dark:text-gray-200 font-semibold text-sm"
                                 href="#"
